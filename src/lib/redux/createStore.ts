@@ -1,7 +1,7 @@
 import { AnyAction, ThunkDispatch, configureStore } from '@reduxjs/toolkit';
 import { rootReducer } from './rootReducer';
 
-type Dependencies = {};
+export type Dependencies = {};
 
 export const createStore = (dependencies: Dependencies) => {
   const store = configureStore({
