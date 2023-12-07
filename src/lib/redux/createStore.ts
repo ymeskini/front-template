@@ -1,4 +1,4 @@
-import { AnyAction, ThunkDispatch, configureStore } from '@reduxjs/toolkit';
+import { Action, ThunkDispatch, configureStore } from '@reduxjs/toolkit';
 import { rootReducer } from './rootReducer';
 
 export type Dependencies = {};
@@ -21,4 +21,4 @@ export const createStore = (dependencies: Dependencies) => {
 type AppStoreWithGetActions = ReturnType<typeof createStore>;
 export type AppStore = Omit<AppStoreWithGetActions, 'getActions'>;
 export type RootState = ReturnType<typeof rootReducer>;
-export type AppDispatch = ThunkDispatch<RootState, Dependencies, AnyAction>;
+export type AppDispatch = ThunkDispatch<RootState, Dependencies, Action>;
